@@ -1,0 +1,48 @@
+<div class="contentLoader ng-scope" ng-show="loading" style="position: fixed; z-index: 9999; margin: 0px auto; width: 100%; text-align: center; height: 100%;">
+    <img src="images/shows-loader.gif" style="background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 0px 0px 5px 5px; padding: 10px 15px; position: relative; z-index: 9999;">
+    <span style="position: absolute; width: 100%; height: 100%; left: 0px;">Loading...</span>
+</div>
+<div class="login-bakg">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="{{baseUrl}}">
+            <img src="images/Logo.png" class="logo1" style="max-width:100%;">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-7">
+      </div>
+      
+      <div class="col-md-5">
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form name="loginForm" method="post" class="form-horizontal" role="form">
+                    <div>
+                        <input type="text" class="form-control" placeholder="User Name" name="username" ng-model="login.username" required focus/>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" placeholder="Password" ng-model="login.password" required/>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-default submit" ng-click="doLogin(login)" data-ng-disabled="loginForm.$invalid">
+                            LOGIN
+                        </button>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <p class="change_link">
+                        <a href="#" class="white_color">Reset Password</a>            
+                    </p>
+                    <ul class="phone_nav">
+                        <li class="phone_text">For support issues</li>
+                        <li class="phone_no">0208 271 892</li>
+                    </ul>
+                </form>
+            </section>
+        </div>
+      </div>
+    </div>
+</div>
+

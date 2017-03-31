@@ -1,0 +1,293 @@
+<!-- container section start -->
+<section id="container" class="" data-ng-init="loadMainMenuCurrntActiveClass('registration')">
+   <!------------ Start Header ---------------->
+   <div ng-include="'partials/careOrg/includes/header.html'"></div>
+   <!------------ End Header ---------------->
+   <!--sidebar start-->
+   <!------------ Start Header ---------------->
+   <!--div ng-include="'partials/careOrg/includes/sidebar.html'"></div-->
+   <!------------ End Header ---------------->
+   <!--sidebar end-->
+   <!--main content start-->
+<!-- container section start -->
+    <div class="container">
+	<section id="content">
+      <section class="wrapper">
+        
+        <!-- Form validations -->
+        <div class="row">
+          
+            <div class="col-md-6">
+              <section class="panel">
+                <div class="panel-body">
+                  <h3 class="page-header"> Complete Registration Form </h3>
+                  <div class="form">
+                    <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">Title </label>
+                        <div class="col-md-9">
+                          <select name="title" class="droupdown1">
+                            <option value="volvo">Mr.</option>
+                            <option value="saab">Mrs.</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">Name </label>
+                        <div class="col-md-9">
+                          <input class="form-control" id="cname" name="Firstname" minlength="5" type="text" required />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">First Name </label>
+                        <div class="col-md-9">
+                          <input class="form-control" id="cname" name="surname" minlength="5" type="text" required />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cemail" class="control-label col-md-3">Surname </label>
+                        <div class="col-md-9">
+                          <input class="form-control " id="cemail" type="email" name="email" required />
+                        </div>
+                      </div>
+					  <div class="form-group ">
+                        <label for="cemail" class="control-label col-md-3">Middle Name</label>
+                        <div class="col-md-9">
+                          <input class="form-control " id="cemail" type="email" name="email" required />
+                        </div>
+                      </div>
+					  
+					  
+                      <div class="form-group ">
+                        <label for="cemail" class="control-label col-md-3">DOB </label>
+                        <div class="col-md-2 dropdown">
+                          <select ng-model="dob.dayDefault" ng-options="d as d.name for d in calcDays track by d.value" class="droupdown1">
+                          </select>
+                        </div>
+                        <div class="col-md-4 dropdown">
+                          <select ng-model="dob.monthDefault" ng-options="m as m.name for m in calcMonths track by m.value" class="droupdown1">
+                          </select>
+                        </div>
+                        <div class="col-md-3 dropdown">
+                          <select ng-model="dob.yearDefault" ng-options="y as y.name for y in calcYears track by y.value" class="droupdown1">
+                          </select>
+                        </div>
+                        <!--div class="col-md-1 control-label "> Age </div>
+                        <div class="col-md-2">
+                          <input class="form-control " id="cemail" type="email" name="email" required />
+                        </div-->
+                      </div>
+                      <div class="form-group ">
+                        <label for="curl" class="control-label col-md-3">NHS Number</label>
+                        <div class="col-md-9">
+                          <input class="form-control " id="curl" type="url" name="url" />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">Gender </label>
+                        <div class="col-md-9">
+                          <div class="gender ">
+                          							
+							<div class="maxl">
+  <label class="radio3 inline3"> 
+      <input type="radio" name="sex" value="male" checked>
+      <span> Male </span> 
+   </label>
+  <label class="radio3 inline3"> 
+     &nbsp;  <input type="radio" name="sex" value="female">
+      <span>Female </span> 
+  </label>
+</div>
+
+  
+  
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">Ethnicity </label>
+                        <div class="col-md-9">
+                          <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+                        </div>
+                      </div>
+                      
+					  <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">Address1 </label>
+                        <div class="col-md-9">
+                          <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">Address2 </label>
+                        <div class="col-md-9">
+                          <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                        </div>
+                      </div>
+					  
+					  
+					  
+						
+						<div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">Post Code</label>
+                       
+					        <div class="col-md-3">  <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required /></div>
+						<div class="col-md-3">  <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required /></div>
+                      </div>
+					  
+						
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3">City </label>
+                        <div class="col-md-9">
+                          <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                        </div>
+                      </div>
+					  
+					               <div class="form-group ">
+                        <label for="cemail" class="control-label col-md-3">Landline </label>
+                        <div class="col-md-9">
+                          <input class="form-control " id="cemail" type="email" name="email" required />
+                        </div>
+                      </div>
+                      <div class="form-group ">
+                        <label for="curl" class="control-label col-md-3">Mobile</label>
+                        <div class="col-md-9">
+                          <input class="form-control " id="curl" type="url" name="url" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div  class="col-md-6">
+              <section class="panel">
+                <div class="panel-body">
+                  <h3 class="page-header"> &nbsp;</h3>
+                  <div class="form">
+                    <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+					
+					<div class="form-group ">
+                        <label for="ccomment" class="control-label col-md-3">Other Information</label>
+                        <div class="col-md-9">
+                          <textarea class="form-control " id="ccomment" name="comment"  rows="8" required></textarea>
+                        </div>
+                      </div>
+					  
+					  <div class="form-group ">
+                        <label for="ccomment" class="control-label col-md-3">Please describe the care you require </label>
+                        <div class="col-md-9">
+                          <textarea class="form-control " id="ccomment" name="comment"  rows="8"required></textarea>
+                        </div>
+                      </div>
+					  
+					  <div class="form-group ">
+                        <label for="ccomment" class="control-label col-md-3">Outcomes you would like to achive </label>
+                        <div class="col-md-9">
+                          <textarea class="form-control " id="ccomment" name="comment"  rows="8" required></textarea>
+                        </div>
+                      </div>
+					  
+					
+                      <div class="form-group ">
+                        <label for="cname" class="control-label col-md-3"> Please select the support equired </label>
+						
+						  <div class="col-md-4">
+						  <label class="radio3 inline3"> 
+      <input type="radio" name="sex" value="female">
+      <span>Personal Care </span> 
+  </label>
+  
+    <div class="clearfix"></div>
+  <label class="radio3 inline3"> 
+      <input type="radio" name="sex" value="female">
+      <span>Medication </span> 
+  </label>
+  <div class="clearfix"></div>
+      <label class="radio3 inline3"> 
+      <input type="radio" name="sex" value="female">
+      <span>Self Support </span> 
+  </label>
+
+  </div>
+						  
+                        <div class="col-md-4">
+                          <label class="radio3 inline3"> 
+      <input type="radio" name="sex" value="male" checked>
+      <span> Supported Living </span> 
+   </label>
+   <div class="clearfix"></div>
+   
+   <label class="radio3 inline3"> 
+      <input type="radio" name="sex" value="male" checked>
+      <span> Outreach </span> 
+   </label>
+   <div class="clearfix"></div>
+    <label class="radio3 inline3"> 
+      <input type="radio" name="sex" value="male" checked>
+      <span> Complex Care </span> 
+   </label>
+  
+  
+  
+                        </div>
+                      </div>
+                      
+					  
+					  <div class="form-group ">
+                        <label for="ccomment" class="control-label col-md-3">Who is making the enquiry </label>
+                        <div class="col-md-9">
+                           <select name="title" class="droupdown1">
+                            <option value="self">Self</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+					  
+                </form>
+                  </div>
+                </div>
+              </section>
+            </div>
+            
+         
+        </div>
+        
+		
+		<div class="row">
+		<form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+		   <div class="form-group">
+            <div class="col-md-6"></div>
+
+            <div class="col-md-2">
+                  <button class="button2" type="submit">MIGRATE</button>
+                </div>
+			   
+			    <div  class="col-md-2"> 
+			  <button class="button2" type="save">SAVE</button>
+               </div>
+			   
+			    <div class="col-md-2">
+                  <button class="button2" type="cancel">CANCEL</button>
+                </div>
+				</div>
+			   </form>
+         </div>
+		
+        <!-- page end-->
+      </section>
+    </section>
+	</div>
+
+  <!--main content end-->
+  <!--<div class="text-right">
+        <div class="credits">
+            <!-- 
+                All the links in the footer should remain intact. 
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+            -->
+  <!--<a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+  </div>
+  </div>
+</section>

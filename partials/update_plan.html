@@ -1,0 +1,99 @@
+<section id="container" class="" data-ng-init="loadCurrntActiveClassForauthCtrlSidebarMenu('create_license_plan')">
+    <!------------ Start Header ---------------->
+    <div ng-include="'partials/includes/SuperAdminHeader.html'"></div>
+    <!------------ End Header ---------------->
+
+    <!-- start: Main Menu -->
+    <aside>
+        <!------------ Start Sidebar ---------------->
+        <div ng-include="'partials/includes/SuperAdminSidebar.html'"></div>
+        <!------------ End Sidebar ---------------->
+    </aside>
+    <!-- end: Main Menu -->
+    
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">   
+            <!--contaent are start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">Update License Plan</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <section data-ng-init="editPlanload()">
+                    <form name="planForm" class="form-horizontal" role="form" method="post">        
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label no-padding-right" for="PlanName">Plan Name</label>
+                            <div class="col-sm-7">
+                                <span class="block input-icon input-icon-right">
+                                    <input type="text" name="PlanName" class="form-control" placeholder="Plan Name" ng-model="resultData.PlanName" required />
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label no-padding-right" for="MinQty">Minimum Quantity</label>
+                            <div class="col-sm-7">
+                                <span class="block input-icon input-icon-right">
+                                    <input type="text" class="form-control" placeholder="Minimum Quantity" numbers-only name="MinQty" required ng-model="resultData.MinQty"/>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label no-padding-right" for="MaxQty">Maximum Quantity</label>
+                            <div class="col-sm-7">
+                                <span class="block input-icon input-icon-right">
+                                    <input type="text" class="form-control" placeholder="Maximum Quantity" numbers-only name="MaxQty" required ng-model="resultData.MaxQty"/>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label no-padding-right" for="Price">Price</label>
+                            <div class="col-sm-7">
+                                <span class="block input-icon input-icon-right">
+                                    <input type="text" numbers-only class="form-control" required placeholder="Price" name="Price" ng-model="resultData.Price"/>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-5 control-label no-padding-right" for="Price">Status</label>
+                            <div class="col-sm-7">
+                                <select name="StatusID" id="StatusID" class="droupdown1">
+                                    <option value="{{S.StatusID}}" ng-repeat="S in Status" ng-selected="{{S.StatusID === resultData.StatusID}}">
+                                        {{S.StatusName}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <span class="lbl col-sm-5"> </span>
+                            <div class="col-sm-7">
+                                <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="updatePlan(resultData)" data-ng-disabled="planForm.$invalid">
+                                    Update
+                                </button>
+                            </div>
+                        </div>
+                        </fieldset>
+                        <span class="lbl col-sm-5"> </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--contaent are end-->
+
+        </section>
+      <!--main content end-->
+    </section>
+  <!-- container section start -->
+</section>
+<!------------ Start Footer ---------------->
+<!--div ng-include="'partials/includes/SuperAdminFooter.html'"></div-->
+<!------------ End Footer ---------------->

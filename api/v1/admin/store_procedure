@@ -1,0 +1,8 @@
+DELIMITER //
+CREATE PROCEDURE `loginWithUsername`(IN `iUsername` VARCHAR(150), IN `iPassword` VARCHAR(150))
+BEGIN
+SELECT U.*
+FROM `SCP_UserLogin` AS U, SCP_Status AS S
+WHERE U.UserName=iUsername AND U.Password= iPassword AND S.StatusID=U.StatusID ;
+END//
+DELIMITER ;

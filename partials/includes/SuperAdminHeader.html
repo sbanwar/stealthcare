@@ -1,0 +1,47 @@
+        <section data-ng-init="restrictSuperAdminOnLoading()">
+        <div class="contentLoader ng-scope" ng-show="loading" style="position: fixed; z-index: 9999; margin: 0px auto; width: 100%; text-align: center; height: 100%;">
+            <img src="images/shows-loader.gif" style="background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 0px 0px 5px 5px; padding: 10px 15px; position: relative; z-index: 9999;">
+            <span style="position: absolute; width: 100%; height: 100%; left: 0px;">Loading...</span>
+        </div>
+		<header class="header dark-bg">
+            <!--div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div-->
+
+            <!--logo start-->
+            <div class="col-md-2">
+                <a href="{{baseUrl}}" class="logo">
+                	<img src="images/innerlogo.png"> 
+                </a>
+            </div>
+            <!--logo end-->
+            <!--  search form start -->
+            <!--div class="nav search-row" id="top_menu">
+                
+                <ul class="nav top-menu">                    
+                    <li>
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
+                        </form>
+                    </li>                    
+                </ul>           
+            </div-->
+            <!--  search form end -->
+            <div class="col-md-10">
+                <div class="top-nav notification-row">                
+                    <!-- notificatoin dropdown start-->
+                    <ul class="nav pull-right top-menu">
+                        <!-- alert notification end-->
+                        <!-- user login dropdown start-->
+                        <li id="task_notificatoin_bar" class="listbg">
+                            <a ng-click="logout();">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <!-- user login dropdown end -->
+                    </ul>
+                    <!-- notificatoin dropdown end-->
+                </div>
+            </div>
+		</header>      
+		<!--header end-->

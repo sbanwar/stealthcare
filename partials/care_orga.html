@@ -1,0 +1,70 @@
+<section id="container" class="" data-ng-init="loadCurrntActiveClassForauthCtrlSidebarMenu('care_orga')">
+    <!------------ Start Header ---------------->
+    <div ng-include="'partials/includes/SuperAdminHeader.html'"></div>
+    <!------------ End Header ---------------->
+
+    <!-- start: Main Menu -->
+    <aside>
+        <!------------ Start Sidebar ---------------->
+        <div ng-include="'partials/includes/SuperAdminSidebar.html'"></div>
+        <!------------ End Sidebar ---------------->
+    </aside>
+    <!-- end: Main Menu -->
+    
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper"> 
+            <!--contaent are start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">Care Organizers</h3>
+                </div>
+            </div>
+            <!--contaent are start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+                        <table class="table table-striped table-advance table-hover">
+                            <tbody>
+                                <tr>
+                                 <th><i class="icon_profile"></i> Full Name</th>
+                                 <th><i class="icon_mail_alt"></i> Email</th>
+                                 <th><i class="icon_cogs"></i> Action</th>
+                                </tr>
+                                <tr dir-paginate="U in UserData|orderBy:sortKey:reverse|filter:search|itemsPerPage:10">
+                                    <td>{{ U.UserName }}</td>
+                                    <td>{{ U.EmailID }}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                          <a class="btn btn-primary" ng-click="loadCareOrg(U.OrgID)" title="Manage Organization"><i class="fa fa-tasks" aria-hidden="true"></i></a>
+                                          <a class="btn btn-edit" href="#/care_org/edit/{{U.UserID}}" title="Edit Organization"><i class="fa fa-pencil"></i></a>
+                                          <!--a ng-if="U.StatusID === '1'" class="btn btn-success" ng-click="changeStatusPlan(U.UserID,2)" title="Deactive Organization"><i class="icon_check_alt2"></i></a>
+                                          <a ng-if="U.StatusID === '2'" class="btn btn-edit" ng-click="changeStatusPlan(U.UserID,1)" title="Active Organization"><i class="fa fa-ban"></i></a-->
+                                          <a class="btn btn-danger" ng-click="deletePlan(U.UserID)" title="Delete Organization"><i class="icon_close_alt2"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>                         
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls
+                            max-size="10"
+                            direction-links="true"
+                            boundary-links="true" >
+                        </dir-pagination-controls>
+                    </section>
+                </div>
+            </div>
+            <!--contaent are start-->
+        </section>
+      <!--main content end-->
+    </section>
+  <!-- container section start -->
+</section>
+<!------------ Start Footer ---------------->
+<!--div ng-include="'partials/includes/SuperAdminFooter.html'"></div-->
+<!------------ End Footer ---------------->

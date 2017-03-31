@@ -1,0 +1,262 @@
+<!-- container section start -->
+<section id="container" class="" data-ng-init="loadMainMenuCurrntActiveClass('clients')">
+   <!------------ Start Header ---------------->
+   <div ng-include="'partials/careOrg/includes/header.html'"></div>
+   <!------------ End Header ---------------->
+   <!--sidebar start-->
+   <!------------ Start Header ---------------->
+   <!--div ng-include="'partials/careOrg/includes/sidebar.html'"></div-->
+   <!------------ End Header ---------------->
+   <!--sidebar end-->
+   <!--main content start-->
+   <div class="container">
+      <section id="content">
+         <section class="wrapper">
+            <!-- Form validations -->
+            <div class="row">
+               <div class="col-md-5">
+                  <section class="panel">
+                     <div class="panel-body">
+                        <h3 class="page-header"> Enter Client Personal Detail</h3>
+                        <div class="form">
+                           <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">Title </label>
+                                 <div class="col-md-9">
+                                    <select name="title" class="droupdown1">
+                                       <option value="volvo">Mr.</option>
+                                       <option value="saab">Mrs.</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">First Name </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="Firstname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">Surname </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="surname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cemail" class="control-label col-md-3">E-Mail </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control " id="cemail" type="email" name="email" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cemail" class="control-label col-md-3">DOB </label>
+                                 <div class="col-md-2">
+                                    <input class="form-control " id="cemail" type="email" name="email" required />
+                                 </div>
+                                 <div class="col-md-2">
+                                    <input class="form-control " id="cemail" type="email" name="email" required />
+                                 </div>
+                                 <div class="col-md-2">
+                                    <input class="textfield2 " id="cemail" type="email" name="email" required />
+                                 </div>
+                                 <div class="col-md-1 control-label"> Age </div>
+                                 <div class="col-md-2">
+                                    <input class="form-control " id="cemail" type="email" name="email" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="curl" class="control-label col-md-3">NHS Number</label>
+                                 <div class="col-md-9">
+                                    <input class="form-control " id="curl" type="url" name="url" />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">Gender </label>
+                                 <div class="col-md-9">
+                                    <div class="gender ">
+                                       <div class="maxl">
+                                          <label class="radio3 inline3"> 
+                                          <input type="radio" name="sex" value="male" checked>
+                                          <span> Male </span> 
+                                          </label>
+                                          <label class="radio3 inline3"> 
+                                          <input type="radio" name="sex" value="female">
+                                          <span>Female </span> 
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">Ethnicity </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="ccomment" class="control-label col-md-3">Other Information</label>
+                                 <div class="col-md-9">
+                                    <textarea class="form-control " id="ccomment" name="comment" required></textarea>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+               <div  class="col-md-5">
+                  <section class="panel">
+                     <div class="panel-body">
+                        <h3 class="page-header"> Enter Client Contact Detail</h3>
+                        <div class="form">
+                           <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">Key Safe Number </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">House Number </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">Address1 </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">Address2 </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">City </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">Country </label>
+                                 <div class="col-md-9">
+                                    <select name="title" class="droupdown1">
+                                       <option value="volvo">Country</option>
+                                       <option value="saab">India</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label for="cname" class="control-label col-md-3">Post Code </label>
+                                 <div class="col-md-3">  <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required /></div>
+                                 <div class="col-md-3">  <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required /></div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cemail" class="control-label col-md-3">Landline </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control " id="cemail" type="email" name="email" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="curl" class="control-label col-md-3">Mobile</label>
+                                 <div class="col-md-9">
+                                    <input class="form-control " id="curl" type="url" name="url" />
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+               <div class="col-md-2">
+                  <div class="user"> <img src="img/User image.png"> </div>
+                  <div class="user_upload"><a href="#">Upload Image <img  src="img/Upload_Icon.png"></a></div>
+                  <div class="add"> Allergies <br>
+                     <br>
+                     <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+                     <a href="#">Add</a> 
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-5">
+                  <section class="panel">
+                     <div class="panel-body">
+                        <h3 class="page-header"> Enter Emergency Contact Detail</h3>
+                        <div class="form">
+                           <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">NOK Name </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cemail" class="control-label col-md-3">NOK Mobile </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control " id="cemail" type="email" name="email" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">NOK Email </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+               <div  class="col-md-5">
+                  <section class="panel">
+                     <div class="panel-body">
+                        <h3 class="page-header"> Enter GP Contact Detail</h3>
+                        <div class="form">
+                           <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">GP Name </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">GP Sergery </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                              <div class="form-group ">
+                                 <label for="cname" class="control-label col-md-3">GP Telephone </label>
+                                 <div class="col-md-9">
+                                    <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-9"></div>
+               <div class="col-md-3">
+                  <div id="button_float">
+                     <div class="form-group">
+                        <div class="col-md-6">
+                           <button class="button2" type="submit">SAVE</button>
+                        </div>
+                        <div class="col-md-6">
+                           <button class="button2" type="button">CANCEL</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- page end-->
+         </section>
+      </section>
+   </div>
+</section>
